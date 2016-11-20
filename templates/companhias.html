@@ -1,0 +1,29 @@
+<ion-view title="Companhias" hide-nav-bar="true" id="page11" style="background-color:#FFFFFF;">
+  <ion-content padding="true" class="manual-ios-statusbar-padding">
+    <form id="companhias-form8" class="list">
+      <label class="item item-input" id="companhias-input12">
+        <input type="text" placeholder="" ng-model="carona.origem">
+      </label>
+      <label class="item item-input" id="companhias-input13">
+        <input type="text" placeholder="" ng-model="carona.destino">
+      </label>
+      <label class="item item-input" id="companhias-input14">
+        <input type="date" placeholder="" ng-model="carona.data">
+      </label>
+      <label class="item item-input" id="companhias-input15">
+        <input type="text" placeholder="" ng-model="carona.hora | date">
+      </label>
+    </form>
+    <div id="companhias-button-bar1" class="button-bar">
+      <a ui-sref="chat" id="companhias-button9" style="color:#5F1673;" class="button button-light  button-block button-outline icon ion-chatboxes"></a>
+      <a ui-sref="navegaO" id="companhias-button11" style="color:#5F1673;" class="button button-light  button-block button-outline icon ion-map"></a>
+    </div>
+    <h4 id="companhias-heading5" style="color:#5F1673;">Minhas companhias</h4>
+    <ion-list id="companhias-list13">
+      <ion-item class="item-avatar" id="companhias-list-item45" ng-repeat="companhia in carona.companhias">
+        <img src="{{companhia.foto}}">
+        <h2>{{companhia.nome}}</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

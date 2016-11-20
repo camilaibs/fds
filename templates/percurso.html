@@ -1,0 +1,22 @@
+<ion-view title="Percurso" hide-nav-bar="true" id="page7" style="background-color:#5F1673;">
+  <ion-content padding="false" class="manual-ios-statusbar-padding">
+    <div id="percurso-container5">
+      <form id="percurso-form6" class="list">
+        <label class="item item-input" id="percurso-input9">
+          <span class="input-label">Origem</span>
+          <input type="text" placeholder="Ex. Metrô Ana Rosa" ng-model="carona.origem">
+        </label>
+        <label class="item item-input" id="percurso-input10">
+          <span class="input-label">Destino</span>
+          <input type="text" placeholder="Ex. Rua Domingos de Morais, 20" ng-model="carona.destino">
+        </label>
+      </form>
+    </div>
+    <creator-map-component options="{}" marker="true" location="Madison Capital" zoom="12" style="display:block;position:relative;width:100%;height:395px;">
+      <ui-gmap-google-map ng-if="map.center" center="map.center" zoom="map.zoom" options="map.options">
+        <ui-gmap-marker coords="map.marker.coords" idkey="map.marker.id" options="map.marker.options"></ui-gmap-marker>
+      </ui-gmap-google-map>
+    </creator-map-component>
+    <a ui-sref="companhias" id="percurso-button3" ng-click="gravar(carona)" style="color:#FFFFFF;" class="button button-light  button-block button-outline">Pronto</a>
+  </ion-content>
+</ion-view>

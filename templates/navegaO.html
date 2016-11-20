@@ -1,0 +1,9 @@
+<ion-view title="Navegação" id="page9">
+  <ion-content padding="false" scroll="false" class="has-header">
+    <creator-map-component options="{}" marker="true" location="Metrô Ana Rosa, Vila Madalena, São Paulo, SP, Brazil" zoom="15" style="display:block;position:relative;width:100%;height:100%;">
+      <ui-gmap-google-map ng-if="map.center" center="map.center" zoom="map.zoom" options="map.options">
+        <ui-gmap-marker coords="map.marker.coords" idkey="map.marker.id" options="map.marker.options"></ui-gmap-marker>
+      </ui-gmap-google-map>
+    </creator-map-component>
+  </ion-content>
+</ion-view>
